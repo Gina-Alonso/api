@@ -29,4 +29,5 @@ public class MedicoController {
     public Page<MedicoDTO> listar(@PageableDefault(size = 10, sort= {"nombre"}) Pageable paginacion){
         return repository.findAll(paginacion).map(MedicoDTO::new);
     }
+
 }
