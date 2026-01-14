@@ -27,4 +27,29 @@ public class Direccion {
         this.ciudad = datoDireccion.ciudad();
         this.estado = datoDireccion.estado();
     }
+
+    public void actualizarDireccion(DatoDireccion datoDireccion) {
+        if (datoDireccion.calle() != null){
+            this.calle = datoDireccion.calle();
+        }
+        if (datoDireccion.numero() != null){
+            this.numero = datoDireccion.numero();
+        }
+        if (datoDireccion.complemento() != null){
+            this.complemento = datoDireccion.complemento();
+        }
+        if (datoDireccion.barrio() != null){
+            this.barrio = datoDireccion.barrio();
+        }
+        if (datoDireccion.codigo_postal() != null){
+            this.codigo_postal = datoDireccion.codigo_postal();
+        }
+        if (datoDireccion.ciudad() != null){
+            this.ciudad = datoDireccion.ciudad();
+        }
+        if (datoDireccion.estado() != null){
+            this.estado = datoDireccion.estado();
+        }
+
+    }
 }
