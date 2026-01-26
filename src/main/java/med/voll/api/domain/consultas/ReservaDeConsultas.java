@@ -64,6 +64,7 @@ public class ReservaDeConsultas {
         if (!repository.existsById(datos.idConsulta())){
             throw new ValidacionException("Id de la consulta informada no existe");
         }
+        validadoresCancelarConsultas.forEach(v->v.validar(datos));
         var consulta = repository.getReferenceById(datos.idConsulta());
         consulta.cancelar(datos.motivo());
     }
